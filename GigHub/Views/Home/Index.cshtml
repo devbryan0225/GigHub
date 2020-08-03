@@ -4,11 +4,22 @@
     ViewBag.Title = "Home Page";
 }
 
-    <ul>
+    <ul class="gigs">
         @foreach(var gig in Model)
         {
-            <li>
-                @gig.DateTime - @gig.Artist.Name
-            </li>
+            <li class="m-4">
+                <div class="calendar">
+                    <div class="month">
+                        @gig.DateTime.ToString("MMM")
+                    </div>
+                    <div class="day">
+                        @gig.DateTime.Day
+                    </div>
+                </div>
+                <div class="artist">
+                    <span><strong>@gig.Artist.Name</strong></span>
+                    <span>@gig.Genre.Name</span>
+                </div>
+            </li>            
         }
     </ul>
