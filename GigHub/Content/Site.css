@@ -104,6 +104,15 @@ body {
         grid-column-gap: 2rem;
     }
 
+    .gigs > li .actions {
+        font-size: 15px;
+        display: none;
+    }
+
+    .gigs > li:hover .actions {
+        display:block;
+    }
+
 .calendar {
     border: thin solid lightgrey;
     border-radius: 2rem;
@@ -127,5 +136,5 @@ body {
     display: flex;
     flex-direction: column;
     height: 8rem;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
