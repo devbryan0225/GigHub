@@ -100,7 +100,7 @@ body {
     .gigs > li {
         display: grid;
         grid-auto-rows: auto;
-        grid-template-columns: 10rem 20rem;
+        grid-template-columns: 10rem 30rem;
         grid-column-gap: 2rem;
     }
 

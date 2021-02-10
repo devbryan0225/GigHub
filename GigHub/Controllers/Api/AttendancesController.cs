@@ -6,32 +6,30 @@ using System.Web.Http;
 
 namespace GigHub.Controllers
 {
-
     [Authorize]
-    public class FollowingsController : ApiController
+    public class AttendancesController : ApiController
     {
         private readonly ApplicationDbContext _context;
 
-        public FollowingsController()
+        public AttendancesController()
         {
             _context = new ApplicationDbContext();
         }
 
         [HttpPost]
-        public IHttpActionResult Attend(FollowerDto dto)
+        public IHttpActionResult Attend(AttendanceDto dto)
         {
             var userId = User.Identity.GetUserId();
 
-            if (_context.Followings.Any(f => f.FollowerId == userId && f.FolloweeId == dto.FolloweeId ))
-                return BadRequest("You are already following.");
+            if (_context.Attendances.Any(a => a.AttendeeId == userId && a.GigId == dto.GigId))
+                return BadRequest("Attendance already exists.");
 
-            var following = new Following
+            var attendance = new Attendance
             {
-                FolloweeId = dto.FolloweeId,
-                FollowerId = userId
+                GigId = dto.GigId,
+                AttendeeId = userId
             };
-
-            _context.Followings.Add(following);
+            _context.Attendances.Add(attendance);
             _context.SaveChanges();
 
             return Ok();
