@@ -33,14 +33,12 @@ namespace GigHub.Models
         }
 
         public void Modify(string venue, DateTime dateTime, byte genreId)
-        {
-            var notification = new Notification(this, NotificationType.GigUpdated);
-            notification.OriginalDateTime = dateTime;
-            notification.OriginalVenue = venue;
-
+        {            
             Venue = venue;
             DateTime = dateTime;
-            GenreId = genreId;            
+            GenreId = genreId;
+
+            var notification = Notification.GigUpdated(this, DateTime, Venue);
 
             foreach (var attendee in Attendances.Select(a => a.Attendee))
                 attendee.Notify(notification);
@@ -51,7 +49,7 @@ namespace GigHub.Models
             IsCanceled = true;
 
             foreach (var attendee in Attendances.Select(a => a.Attendee))
-                attendee.Notify(new Notification(this, NotificationType.GigCanceled));
+                attendee.Notify(Notification.GigCanceled(this));
         }
     }
 }
