@@ -24,8 +24,8 @@ textarea {
 }
 
 span.field-validation-error {
-    color:red;
-    font-weight:bold;
+    color: red;
+    font-weight: bold;
 }
 
 /* Bootstrap Override */
@@ -34,13 +34,24 @@ span.field-validation-error {
     border-color: #ff4342;
 }
 
-.navbar-inverse .navbar-nav  > li > a {
-    color: #fff;
-}
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff;
+    }
 
     .navbar-inverse .navbar-brand {
         color: #fff;
     }
+
+    .navbar-inverse .notifications {
+        position: relative;
+    }
+
+        .navbar-inverse .notifications .badge {
+            position: absolute;
+            top: 8px;
+            right: -1px;
+            background: #a80a0a;
+        }
 
     .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
         background-color: rgba(205, 40, 39, 0.55);
@@ -104,14 +115,14 @@ body {
         grid-column-gap: 2rem;
     }
 
-    .gigs > li .actions {
-        font-size: 15px;
-        display: none;
-    }
+        .gigs > li .actions {
+            font-size: 15px;
+            display: none;
+        }
 
-    .gigs > li:hover .actions {
-        display:block;
-    }
+        .gigs > li:hover .actions {
+            display: block;
+        }
 
 .calendar {
     border: thin solid lightgrey;
