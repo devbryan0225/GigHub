@@ -23,3 +23,11 @@ This is a practice project for Pluralsight .NET Full Stack Development.
 - Encapsulate business logic in domain models, so that business logic grows and contained within your domain models.
 - Always be in a valid state. (through access modifiers)
 - Cohesion: things highly related should be together, architectural and method level. ex. Cancel method will set gig status to canceled, and also notify attendees.
+
+## API
+- Use dto to restrict json data responses
+- Simplify mapping to dto with Automapper
+
+## Questions
+- How does the API authentication works?
+- user.identity.getuserid()
