@@ -46,14 +46,32 @@
             if (notification.type == 0) { %>
                 <li><%= notification.gig.artist.name %> has canceled the gig at <%= notification.gig.venue %> at <%= notification.gig.dateTime %>.</li>
 
-            <% };
+            <% }
 
-            if (notification.type == 1) { %>
-                <li><%= notification.gig.artist.name %> has updated the gig at <%= notification.gig.venue %> at <%= notification.gig.dateTime %>.</li>
+            else if (notification.type == 1) {
+                var changes = [],
+                    originalValues = [],
+                    newValues = [];
 
-            <% };
+                if (notification.originalVenue != notification.gig.venue) {
+                    changes.push('venue');
+                    originalValues.push(notification.originalVenue);
+                    newValues.push(notification.gig.venue);
+                }
 
-            if (notification.type == 2) { %>
+                if (notification.originalDateTime != notification.gig.dateTime) {
+                    changes.push('date/time');
+                    originalValues.push(notification.originalDateTime);
+                    newValues.push(notification.gig.dateTime);
+                }
+
+                %>
+
+                <li><%= notification.gig.artist.name %> has updated the <%= changes.join(' and ') %> from <%= originalValues.join(' and ') %> to <%= newValues.join(' and ') %> gig at <%= notification.gig.venue %> at <%= notification.gig.dateTime %>.</li>
+
+            <% }
+
+            else if (notification.type == 2) { %>
                 <li><%= notification.gig.artist.name %> has created the gig at <%= notification.gig.venue %> at <%= notification.gig.dateTime %>.</li>
 
             <% };
