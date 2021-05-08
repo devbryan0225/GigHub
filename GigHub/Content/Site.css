@@ -142,6 +142,10 @@ body {
             border-bottom: none;
         }
 
+        .popover-notifications ul.notifications .highlight {
+            font-weight: bold;
+        }
+
 .calendar {
     border: thin solid lightgrey;
     border-radius: 2rem;
