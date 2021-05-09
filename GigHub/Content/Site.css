@@ -1,179 +1,147 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
-
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space: normal;
+  white-space: normal;
 }
-
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 280px;
+  max-width: 280px;
 }
-
 span.field-validation-error {
-    color: red;
-    font-weight: bold;
+  color: red;
+  font-weight: bold;
 }
-
 /* Bootstrap Override */
-
 .popover {
-    box-shadow: none;
-    -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
-
 .navbar-inverse {
-    background-color: #ff4342;
-    border-color: #ff4342;
+  background-color: #ff4342;
+  border-color: #ff4342;
 }
-
-    .navbar-inverse .navbar-nav > li > a {
-        color: #fff;
-    }
-
-    .navbar-inverse .navbar-brand {
-        color: #fff;
-    }
-
-    .navbar-inverse .notifications {
-        position: relative;
-    }
-
-        .navbar-inverse .notifications .badge {
-            position: absolute;
-            top: 8px;
-            right: -1px;
-            background: #a80a0a;
-        }
-
-    .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-        background-color: rgba(205, 40, 39, 0.55);
-    }
-
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-inverse .navbar-brand {
+  color: #fff;
+}
+.navbar-inverse .notifications {
+  position: relative;
+}
+.navbar-inverse .notifications .badge {
+  position: absolute;
+  top: 8px;
+  right: -1px;
+  background: #a80a0a;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: rgba(205, 40, 39, 0.55);
+}
 .dropdown-menu {
-    box-shadow: none;
-    -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
-
 .navbar-inverse .navbar-nav > .dropdown > a .caret {
-    border-top-color: #fff;
-    border-bottom-color: #fff;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
 }
-
 .navbar-brand {
-    font-weight: 700;
+  font-weight: 700;
 }
-
 body {
-    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17px;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
 }
-
 .form-control {
-    font-size: 17px;
-    height: 4rem;
-    -ms-border-radius: 9px;
-    border-radius: 9px;
+  font-size: 17px;
+  height: 4rem;
+  -ms-border-radius: 9px;
+  border-radius: 9px;
 }
-
-    .form-control:focus {
-        border-color: #2196f3;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-
+.form-control :focus {
+  border-color: #2196f3;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
 .btn {
-    /*font-size: 17px;
+  /*font-size: 17px;
     padding: 7px 20px;*/
-    -ms-border-radius: 9px;
-    border-radius: 9px;
+  -ms-border-radius: 9px;
+  border-radius: 9px;
 }
-
 .m-4 {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
-
 .gigs {
-    list-style: none;
+  list-style: none;
 }
-
-    .gigs > li {
-        display: grid;
-        grid-auto-rows: auto;
-        grid-template-columns: 10rem 30rem;
-        grid-column-gap: 2rem;
-    }
-
-        .gigs > li .actions {
-            font-size: 15px;
-            display: none;
-        }
-
-        .gigs > li:hover .actions {
-            display: block;
-        }
-
+.gigs > li {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: 10rem 30rem;
+  grid-column-gap: 2rem;
+}
+.gigs > li .actions {
+  font-size: 15px;
+  display: none;
+}
+.gigs > li :hover .actions {
+  display: block;
+}
 .popover-notifications .popover-content {
-    padding: 0;
+  padding: 0;
 }
-
 .popover-notifications ul.notifications {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
-
-    .popover-notifications ul.notifications > li {
-        border-bottom: 1px solid #ddd;
-        padding: 10px;
-    }
-
-        .popover-notifications ul.notifications > li:last-child {
-            border-bottom: none;
-        }
-
-        .popover-notifications ul.notifications .highlight {
-            font-weight: bold;
-        }
-
+.popover-notifications ul.notifications > li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.popover-notifications ul.notifications > li:last-child {
+  border-bottom: none;
+}
+.popover-notifications ul.notifications .highlight {
+  font-weight: bold;
+}
 .calendar {
-    border: thin solid lightgrey;
-    border-radius: 2rem;
-    text-align: center;
-    overflow: hidden;
-    font-weight: bold;
+  border: thin solid lightgrey;
+  border-radius: 2rem;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
 }
-
 .month {
-    padding: 1rem;
-    background-color: orangered;
-    color: white;
+  padding: 1rem;
+  background-color: orangered;
+  color: white;
 }
-
 .day {
-    padding: 1rem;
+  padding: 1rem;
 }
-
 .artist {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    height: 8rem;
-    justify-content: flex-start;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 8rem;
+  justify-content: flex-start;
 }
